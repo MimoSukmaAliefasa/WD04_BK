@@ -14,6 +14,10 @@ class Periksa extends Model
         'biaya_periksa',
     ];
 
+    protected $casts = [
+        'tgl_periksa' => 'datetime',
+    ];
+
     public function janjiPeriksa()
     {
         return $this->belongsTo(JanjiPeriksa::class, 'id_janji_periksa');

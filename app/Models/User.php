@@ -19,14 +19,14 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'nama',
+        'email',
+        'password',
         'role',
         'alamat',
         'no_ktp',
         'no_hp',
         'no_rm',
         'poli',
-        'email',
-        'password',
     ];
 
     public function jadwalPeriksas()

@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('janji_periksas', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_pasien')->constrained('users')->onDelete('cascade');
-            $table->foreignId('id_jadwal_periksa')->constrained('jadwal_periksas')->onDelete('cascade');
+            $table->foreignId('id_pasien')->constrained('users');
+            $table->foreignId('id_jadwal_periksa')->constrained('jadwal_periksas');
             $table->text('keluhan');
             $table->integer('no_antrian'); 
             $table->timestamps();

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('jadwal_periksas', function (Blueprint $table) {
             $table->id();
             $table->foreignId('id_dokter')->constrained('users')->onDelete('cascade');
-            $table->enum('hari', ['senin', 'selasa', 'rabu', 'kamis', 'jumat', 'sabtu']);
+            $table->enum('hari', ['senin', 'selasa', 'rabu', 'kamis', 'jumat', 'sabtu','minggu']);
             $table->time('jam_mulai');
             $table->time('jam_selesai');
             $table->string('status');
